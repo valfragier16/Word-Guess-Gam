@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Word Guessing Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Rubik+Mono+One" rel="stylesheet">
+</head>
+
+<body onload="resetGame();">
+
+    <!--Begin the main content of the page -->
+    <div id="content">
+        <!-- The header section will repeat on all three HTML pages of the assignment -->
+        <header>
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Know Bones About It</h1>
+                    <h2>A Word Guessing Game: Human Anatomy Series</h2>
+                </div>
+        </header>
+        <!-- End the header -->
+        <div class="container" id="bodyContent">
+            <div class="row">
+                <div class="col-sm-6" id="infocontent">
+                    <div>
+                        <img src="assets/images/skeletonimage.jpg" class="img-responsive" alt="Skeleton">/>
+                    </div>
+                </div>
+                <div class="col-sm-6" id="gamecontent">
+                    <!--Make this pretty later with CSS 
+                                        Mock up what you want to be printed in this section.
+                                        Test to see if JS overides the default values-->
+                    <h2 id="startMsg">
+                        <strong>Press any letter to play.</strong>
+                    </h2>
+                    <p>
+                        <strong>Wins</strong>
+                    </p>
+                    <h1 id="winCount"></h1>
+                    <strong>Losses</strong>
+                    </p>
+                    <h1 id="lossCount"></h1>
+                    <strong>Current Word</strong>
+                    <h1 id="currentWord"></h1>
+                    <strong>Number of Guesses Remaining</strong>
+                    <h1 id="remainingChances"></h1>
+                    <strong>Letters already guessed</strong>
+                    <p>
+                        <h1 id="usedLetters"></h1>
+
+                </div>
+            </div>
+            <!--End the main content -->
+        </div>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+        <script src="assets/js/myscript.js"></script>
+
+</body>
+
+</html>
