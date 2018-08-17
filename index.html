@@ -2,22 +2,24 @@
 <html lang="en">
 
 <head>
-    <title>Word Guessing Game</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
     <link type="text/css" rel="stylesheet" href="Assests/CSS/reset.css">
-    <link type="text/css" rel="stylesheet" href="Assests/CSS/style.css
-    ">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="Assests/CSS/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Faster+One|Rubik+Mono+One" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One|Rubik+Mono+One" rel="stylesheet">
+    
     <!-- Google gont link -->
     <link href="https://fonts.googleapis.com/css?family=Jua|Shadows+Into+Light" rel="stylesheet">
-
+    <title>90's | Word Guessing Game</title>
 </head>
 
 <body onload="resetGame();">
@@ -26,10 +28,20 @@
     <div id="content">
         <!-- The header section will repeat on all three HTML pages of the assignment -->
         <header>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4">HANGMAN</h1>
-                    <p class="lead">word Guessing Game - 90's Theme</p>
+            <div class="header">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12" id="header_section">
+                                <div class="overlay">
+                                    <h1 class="display-4"> HANGMAN
+                                        <br>
+                                    <p class="lead"> Word Guessing Game </p>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -38,15 +50,13 @@
         <!-- Main Section of Game -->
         <div class="container" id="bodyContent">
             <div class="row">
-                <div class="col-sm-6" id="infocontent">
+                <div class="col-sm-7" id="infocontent">
                     <div>
-                        <img src="Assests/Images/90s_cartoons_3.jpg" class="img-responsive" alt="cartoons">
+                        <img src="Assests/Images/90s_cartoons_3.jpg" style="width: 600px; height: 400px; float:left;" class="img-responsive" alt="cartoons">
                     </div>
                 </div>
-                <div class="col-sm-6" id="gamecontent">
-                    <!--Make this pretty later with CSS 
-                                        Mock up what you want to be printed in this section.
-                                        Test to see if JS overides the default values-->
+                <div class="col-sm-5" id="gamecontent">
+
                     <h2 id="startMsg">
                         <strong>Press any letter to play.</strong>
                     </h2>
@@ -87,6 +97,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>
 

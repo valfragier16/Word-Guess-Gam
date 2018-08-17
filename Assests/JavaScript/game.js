@@ -22,7 +22,7 @@ the bone.
 6) Function to check if user input is a letter
 */
 
-// Cartoon variables. Research objects. Maybe add additional information about the correct bone when the user wins?
+// Cartoon variables . 
 let wordBank = ["animaniacs", 
         "pinky and the Brain", 
         "rugrats", 
@@ -43,6 +43,7 @@ let wordBank = ["animaniacs",
         "wild thornberry's",
         "tom and jerry",
         "aaahh!!! real monsters"];
+
 // My research shows that const is the best practice for the use of the maxTries letiable.
 const maxTries = 10;
 let guessedLetters = [];
@@ -79,7 +80,7 @@ guessingWordText += guessingWord[i];
 console.log("CurrentWord:", guessingWordText);
 console.log("GuessingWord:", guessingWord);
 console.log("CurrentWordIndex:", currentWordIndex);
-console.log("Bone:", wordBank[currentWordIndex]);
+console.log("Cartoon:", wordBank[currentWordIndex]);
 document.getElementById("currentWord").innerText = guessingWordText;
 document.getElementById("remainingChances").innerText = remainingGuesses;
 document.getElementById("usedLetters").innerText = guessedLetters;
@@ -153,4 +154,4 @@ if (event.keyCode >= 65 && event.keyCode <= 90) {
     checkLoss();
 }
 }
-}; 
+};
