@@ -3,14 +3,7 @@
 
 
 .jumbotron{
-    background-image: url("../Images/90s_mainbanner.jpg");}
-
-.header {
-    font-weight: bolder;
-    color: greenyellow;
-    background-color: black;
-    float: right;
-    text-align: center;
+    background-image: url("../Images/90s_mainbanner.jpg");
 
 }
 

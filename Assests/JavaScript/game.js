@@ -19,7 +19,7 @@ Functions
 */
 
 // Global variables. Research objects. Maybe add additional information about the correct bone when the user wins?
-let wordBank = ["dragon ball z", 
+let wordBank = ["clifford", 
         "recess", 
         "batman", 
         "rugrats", 
