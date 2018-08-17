@@ -1,19 +1,15 @@
-/* Main jscode will be here.*/
-
-
-//This is a word guess game writting in HTML, CSS, JavaScript, and Bootstrap
-
-/* There will be several other variables that we need to declare.
+/*
+Main jscode will be here.
+This is a word guess game writting in HTML, CSS, JavaScript, and Bootstrap
+There will be several other variables that we need to declare.
 Variables that need to be declared.
 1) The will be an array of length ? of the bones I choose. Possible to make it an object to contain additional information about
 the bone.
 2) A listener, to start the game and know the state of each key press event.
 3) An input of what the user has entered. May be able to resuse the listener.
 4) An array to contain what letters the user already has entered.
-5) A counter to minus minus with each unsuccessful guess.*/
-
-
-/* Functions 
+5) A counter to minus minus with each unsuccessful guess.
+Functions 
 1) One can include a check to see if the letter chosen is in the guess
 2) Function to re-write the puzzle section
 3) Function to pop the letters used 
@@ -22,28 +18,27 @@ the bone.
 6) Function to check if user input is a letter
 */
 
-// Cartoon variables . 
-let wordBank = ["animaniacs", 
-        "pinky and the Brain", 
-        "rugrats", 
-        "hey arnold", 
-        "arthur", 
-        "daria", 
-        "beetlejuice", 
-        "catdog", 
-        "pokemon", 
-        "transformers", 
-        "rocket power", 
+// Global variables. Research objects. Maybe add additional information about the correct bone when the user wins?
+let wordBank = ["dragon ball z", 
         "recess", 
-        "spongebob",
-        "batman",
+        "batman", 
+        "rugrats", 
+        "animaniacs", 
+        "flintstones", 
+        "daria", 
+        "ghostbusters", 
+        "catdog", 
+        "spongebob", 
+        "superman", 
+        "pokemon", 
+        "transformers",
         "doug",
-        "scooby-doo",
-        "dragon ball z",
-        "wild thornberry's",
-        "tom and jerry",
-        "aaahh!!! real monsters"];
-
+        "arthur",
+        "beetlejuice",
+        "ducktales",
+        "thundercats",
+        "gargoyles",
+        "freakazoid"];
 // My research shows that const is the best practice for the use of the maxTries letiable.
 const maxTries = 10;
 let guessedLetters = [];
@@ -63,6 +58,7 @@ guessedLetters = [];
 guessingWord = [];
 for (let i = 0; i < wordBank[currentWordIndex].length; i++) {
 guessingWord.push("_");
+var blankSpaces = "";
 }
 updateGameContent();
 };
@@ -80,7 +76,7 @@ guessingWordText += guessingWord[i];
 console.log("CurrentWord:", guessingWordText);
 console.log("GuessingWord:", guessingWord);
 console.log("CurrentWordIndex:", currentWordIndex);
-console.log("Cartoon:", wordBank[currentWordIndex]);
+console.log("Bone:", wordBank[currentWordIndex]);
 document.getElementById("currentWord").innerText = guessingWordText;
 document.getElementById("remainingChances").innerText = remainingGuesses;
 document.getElementById("usedLetters").innerText = guessedLetters;
@@ -154,4 +150,4 @@ if (event.keyCode >= 65 && event.keyCode <= 90) {
     checkLoss();
 }
 }
-};
+};    
