@@ -18,7 +18,7 @@ Functions
 6) Function to check if user input is a letter
 */
 
-// Global variables. Research objects. Maybe add additional information about the correct bone when the user wins?
+// Cartoon variables(Wordbank)
 let wordBank = ["clifford", 
         "recess", 
         "batman", 
@@ -39,33 +39,44 @@ let wordBank = ["clifford",
         "thundercats",
         "gargoyles",
         "freakazoid"];
-// My research shows that const is the best practice for the use of the maxTries letiable.
+
+
 const maxTries = 10;
-let guessedLetters = [];
-let currentWordIndex;
-let guessingWord = [];
-let remainingGuesses = 0;       // Lives
-let hasFinished = false;        // Flag    
-let wins = 0;                   // Set Wins to Zero
-let losses = 0;                 // Set Losses to Zero
+var guessedLetters = [];
+var currentWordIndex;
+var guessingWord = [];
+
+// # of Lives
+var remainingGuesses = 0; 
+
+
+//Boolean
+var hasFinished = false; 
+
+
+// When game begins start at 0   
+var wins = 0;                   
+var losses = 0;                
 
 // This function is needed upon start of the game and upon either meeting a Game Win or Game Lose condition
 function resetGame() {
 remainingGuesses = maxTries;
-document.getElementById("startMsg").innerText = "Press any letter to play.";
+document.getElementById("startMsg").innerText = "Press any letter to play!";
 currentWordIndex = Math.floor(Math.random() * (wordBank.length));
 guessedLetters = [];
 guessingWord = [];
+
 for (let i = 0; i < wordBank[currentWordIndex].length; i++) {
 guessingWord.push("_");
-var blankSpaces = "";
+
 }
 updateGameContent();
 };
 
-// This function is needed to send to the html the updates and status of where we are in the game instance.
+//Sends updates and status of where we are in the game instance.
 function updateGameContent() {
 
+//score
 document.getElementById("winCount").innerText = wins;
 document.getElementById("lossCount").innerText = losses;
 let guessingWordText = "";
@@ -89,7 +100,9 @@ function evaluateGuess(letter) {
 // Array to store strArray of letters in string
 let strArray = [];
 console.log("Current Word Index :", currentWordIndex);
-// Loop through word finding all instances of guessed letter, store value in an array.
+
+
+// Loop  to determine the letters for the word, stored in the array.
 for (let i = 0; i < wordBank[currentWordIndex].length; i++) {
 if (wordBank[currentWordIndex][i] === letter) {
     strArray.push(i);
@@ -104,24 +117,29 @@ for (let i = 0; i < strArray.length; i++) {
 }
 }
 };
-/*Following pair of functions are called firstly upon a keydown event and lastly after letter
+
+/*Function for differentiaing your guesses that and upon the word being completed or the guesses running out a message will appear.
 evaluation logic has completed*/
+
+//Win Message
 function checkWin() {
 if (guessingWord.indexOf("_") === -1) {
 wins++;
 hasFinished = true;
-document.getElementById("startMsg").innerText = "Congratulations!";
+document.getElementById("startMsg").innerText = "Congratulations! Keep it up!";
 }
 }; 
 
-
+//Lose Message
 function checkLoss() {
 if (remainingGuesses <= 0) {
 hasFinished = true;
 losses++;
-document.getElementById("startMsg").innerText = "Sorry you lose!";
+document.getElementById("startMsg").innerText = "Sorry you lose! Try Again!";
 }
 }
+
+
 
 // Makes a guess
 function letterPress(letter) {
