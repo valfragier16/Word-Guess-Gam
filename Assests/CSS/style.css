@@ -4,18 +4,23 @@
 
 .jumbotron{
     background-image: url("../Images/90s_mainbanner.jpg");
-
+    background-position: center;
+    size: 50px;
 }
 
+.display-4 {
+    font-weight: bolder;
+    float: right;
+    color: greenyellow;
+    background-color: black;
+    text-align: center;
+    font-family: 'Monoton', cursive;  
+}
 
 #gamecontent {
     color: #ffffff;
 }
 
-.bodycontent {
-    font-family: 'Faster One', cursive;
-
-}
 
 body{
     background-image: url("../Images/old_tv.jpg"); 

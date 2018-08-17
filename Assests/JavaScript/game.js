@@ -144,7 +144,7 @@ document.getElementById("startMsg").innerText = "Sorry you lose! Try Again!";
 // Makes a guess
 function letterPress(letter) {
 if (remainingGuesses > 0) {
-// Make sure we didn't use this letter yet
+// Make sure we didn't use this letter yet again
 if (guessedLetters.indexOf(letter) === -1) {
     guessedLetters.push(letter);
     evaluateGuess(letter);
@@ -155,11 +155,15 @@ if (guessedLetters.indexOf(letter) === -1) {
 
 // Event listener
 document.onkeydown = function (event) {
+
+
 // If we finished a game, dump one keystroke and reset.
 if (hasFinished) {
 resetGame();
 hasFinished = false;
 } else {
+
+
 // Check to make sure a-z was pressed.
 if (event.keyCode >= 65 && event.keyCode <= 90) {
     letterPress(event.key.toLowerCase());
