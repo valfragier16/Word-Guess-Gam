@@ -1,5 +1,5 @@
 
-/* Variables */
+/* Global Variables */
 // Cartoons within Word Bank
 var wordBank = ["clifford", 
         "recess", 
