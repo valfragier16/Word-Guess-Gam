@@ -1,3 +1,19 @@
+/* Mario Bros theme music */
+$(document).ready(function() {
+
+    // Gets Link for Theme Song
+    var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", "Assests/Audio/Super Mario Brothers - 1989.mp3" );
+    
+    // Theme Button
+    $(".theme-button").on("click", function() {
+      audioElement.play();
+    });
+    $(".pause-button").on("click", function() {
+      audioElement.pause();
+    });
+});
+
 
 /* Global Variables */
 // Cartoons within Word Bank
