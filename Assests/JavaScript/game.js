@@ -102,18 +102,18 @@ console.log("Current Word Index :", currentWordIndex);
 
 
 // Loop  to determine the letters for the word, stored in the array.
-for (var i = 0; i < wordBank[currentWordIndex].length; i++) {
-if (wordBank[currentWordIndex][i] === letter) {
-    strArray.push(i);
-}
-}
+    for (var i = 0; i < wordBank[currentWordIndex].length; i++) {
+        if (wordBank[currentWordIndex][i] === letter) {
+        strArray.push(i);
+        }
+    }
 
-if (strArray.length <= 0) {
-remainingGuesses--;
-} else {
-for (var i = 0; i < strArray.length; i++) {
-    guessingWord[strArray[i]] = letter;
-}
+    if (strArray.length <= 0) {
+        remainingGuesses--;
+    } else {
+    for (var i = 0; i < strArray.length; i++) {
+        guessingWord[strArray[i]] = letter;
+    }
 }
 };
 
@@ -122,20 +122,20 @@ evaluation logic has completed*/
 
 //Win Message
 function checkWin() {
-if (guessingWord.indexOf("_") === -1) {
-wins++;
-hasFinished = true;
-document.getElementById("startMsg").innerText = "Congratulations! Keep it up!";
-}
+    if (guessingWord.indexOf("_") === -1) {
+    wins++;
+    hasFinished = true;
+    document.getElementById("startMsg").innerText = "Congratulations! Keep it up!";
+    }
 }; 
 
 //Lose Message
 function checkLoss() {
-if (remainingGuesses <= 0) {
-hasFinished = true;
-losses++;
-document.getElementById("startMsg").innerText = "Sorry you lose! Try Again!";
-}
+    if (remainingGuesses <= 0) {
+    hasFinished = true;
+    losses++;
+    document.getElementById("startMsg").innerText = "Sorry you lose! Try Again!";
+    }
 }
 
 
@@ -143,11 +143,11 @@ document.getElementById("startMsg").innerText = "Sorry you lose! Try Again!";
 // Makes a guess
 function letterPress(letter) {
 if (remainingGuesses > 0) {
-// Make sure we didn't use this letter yet again
-if (guessedLetters.indexOf(letter) === -1) {
-    guessedLetters.push(letter);
-    evaluateGuess(letter);
-}
+    // Make sure we didn't use this letter yet again
+    if (guessedLetters.indexOf(letter) === -1) {
+        guessedLetters.push(letter);
+        evaluateGuess(letter);
+    }
 }
 
 };
@@ -158,17 +158,17 @@ document.onkeydown = function (event) {
 
 // Function when game is complete, hit any letter on keyboard to restart next word
 if (hasFinished) {
-resetGame();
-hasFinished = false;
+    resetGame();
+    hasFinished = false;
 } else {
 
 
 // Function to check to make sure a-z was pressed.
-if (event.keyCode >= 65 && event.keyCode <= 90) {
-    letterPress(event.key.toLowerCase());
-    updateGameContent();
-    checkWin();
-    checkLoss();
-}
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+        letterPress(event.key.toLowerCase());
+        updateGameContent();
+        checkWin();
+        checkLoss();
+    }
 }
 };    
